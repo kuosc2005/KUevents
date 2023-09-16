@@ -1,4 +1,5 @@
 import logo from '../assets/logo.svg';
+import logo2 from '../assets/logo2.svg';
 import logo_icon from '../assets/logo_icon.png';
 import vert_icon from '../assets/vert_icon.svg';
 import dummy from '../assets/dummy.svg';
@@ -52,6 +53,7 @@ import InstagramLogo from '../assets/icons/Phosphor icons/InstagramLogo.png';
 
 export default {
     logo,
+    logo2,
     image1,
     image2,
     hamburger,

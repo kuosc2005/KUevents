@@ -31,9 +31,12 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="footer__logo">
-        <h1>
-          Event <span>Hive</span>
-        </h1>
+        {/* <h1>
+          KU <span>vents</span>
+        </h1> */}
+        <Link to="/">
+        <img src={images.logo2} alt="logo" className="footer__logo" />
+      </Link>
       </div>
       <div className="footer__mail">
         <input
@@ -67,7 +70,7 @@ const Footer = () => {
           <button>English</button>
         </div>
         <div className="footer__bottom__copyright">
-          Copyrighted © 2023 Upload by Event Hive
+          Copyrighted © 2023 Upload by KUvents
         </div>
         <div className="footer__bottom__social">
           <img src={images.FacebookLogo} alt="FacebookLogo" />
