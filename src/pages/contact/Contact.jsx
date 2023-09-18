@@ -27,18 +27,18 @@ const Contact = () => {
         <h3>Contact Information:</h3>
         <ul>
           <li>
-            Phone: <a href="tel:8009396321">+91 8009396321</a>
+            Phone: <a href="tel:8009396321">+977 9846898818</a>
           </li>
           <li>
             Email:{" "}
-            <a href="mailto:officialprashanttt@gmail.com">
-              officialprashanttt@gmail.com
+            <a href="mailto:roshansahani226@gmail.com">
+              roshansahani226@gmail.com
             </a>
           </li>
           <li>
             Address:{" "}
-            <a href="https://en.wikipedia.org/wiki/New_Delhi">
-              New Delhi, India
+            <a href="https://en.wikipedia.org/wiki/Kathmandu_University">
+              Dhulikhel, Kathmandu University
             </a>
           </li>
         </ul>
