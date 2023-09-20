@@ -102,14 +102,7 @@ const About = () => {
             >
               <img src={images.github} alt="event-hive" />
             </a>
-            <a
-              href="https://codepen.io/devprashantt"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={images.codepen} alt="event-hive" />
-            </a>
-          </div>
+            </div>
         </div>
       </div>
     </div>
