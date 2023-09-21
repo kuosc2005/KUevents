@@ -74,13 +74,7 @@ const About = () => {
             >
               <img src={images.twitter} alt="event-hive" />
             </a>
-            <a
-              href="https://dribbble.com/prashanntt"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={images.dribble} alt="event-hive" />
-            </a>
+        
             <a
               href="https://www.figma.com/@prashantkumarr"
               target="_blank"
