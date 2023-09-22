@@ -133,7 +133,7 @@ const Colleges = () => {
         </div>
       </div>
       <div className="colleges__header">
-        <h1 className="colleges__header__name">Collegess</h1>
+        <h1 className="colleges__header__name">Colleges</h1>
         <div className="colleges__header__input">
           <input
             type="text"
