@@ -103,15 +103,15 @@ const Events = () => {
               lineHeight: "1",
             }}
           >
-            Event
+            KU
             <span
               style={{
                 color: "#7848F4",
               }}
             >
-              Hive
+              vents
             </span>
-            -ing the Best.Day.Ever.
+            Enjoy the experience.
           </div>
           <div
             style={{
