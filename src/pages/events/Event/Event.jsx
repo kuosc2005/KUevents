@@ -226,7 +226,7 @@ const Event = () => {
               }}
               href={college.link}
             >
-              College website
+              College Website
             </a>
             <Link to={"/colleges/" + event.colleges[0]}>
               <p
