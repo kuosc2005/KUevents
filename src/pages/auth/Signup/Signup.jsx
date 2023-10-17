@@ -57,9 +57,9 @@ function Signup() {
       <div className="right">
         <div className="right__container">
           <h1 className="logo">
-            Event<span>Hive</span>
+            KU<span>vents</span>
           </h1>
-          <h1>Sign Up to Event Hive</h1>
+          <h1>Sign Up to KUvents</h1>
           {error && <div className="error">{error}</div>}
           <form onSubmit={handleSubmit}>
             <Input
@@ -93,6 +93,12 @@ function Signup() {
             <button className="google__button">
               <img src={images.google} alt="google" />
               <p>Signup with Google</p>
+            </button>
+          </Link>
+          <Link to="/">
+            <button className="apple__button">
+              <img src={images.apple} alt="apple" />
+              <p>Signin with Apple</p>
             </button>
           </Link>
         </div>

@@ -49,7 +49,7 @@
                 font-style: normal;
                 font-weight: 400;
                 font-size: 16px;
-                line-height: 19px;
+                line-height: 16px;
                 display: flex;
                 align-items: center;
                 text-align: center;
@@ -182,10 +182,41 @@
                 flex-direction: row;
                 justify-content: center;
                 align-items: center;
-                padding: 15px 40px;
+                padding: 15px 30px;
                 gap: 10px;
                 background: #ffffff;
                 border-radius: 5px;
+
+                border: 1px solid #e0e0e9;
+                cursor: pointer;
+
+                img {
+                    width: 20px;
+                    height: 20px;
+                }
+
+                p {
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 16px;
+                    display: flex;
+                    align-items: center;
+                    text-align: center;
+                    color: #131315;
+                }
+            }
+            .apple__button {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                padding: 15px 30px;
+                gap: 10px;
+                background: #ffffff;
+                border-radius: 5px;
+                width: 234.4px;
+                height: 51.6px;
 
                 border: 1px solid #e0e0e9;
                 cursor: pointer;

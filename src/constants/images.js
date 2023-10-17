@@ -46,6 +46,7 @@ import codepen from '../assets/social/Codepen.svg';
 import figma from '../assets/social/Figma.svg';
 import dribble from '../assets/social/Dribble.svg';
 import github from '../assets/social/Github.svg';
+import apple from '../assets/social/Apple.svg';
 
 import FacebookLogo from '../assets/icons/Phosphor icons/FacebookLogo.png';
 import LinkedinLogo from '../assets/icons/Phosphor icons/LinkedinLogo.png';
@@ -72,6 +73,7 @@ export default {
     linkedin,
     whatsapp,
     google,
+    apple,
     home_image,
     dummy,
     reset,

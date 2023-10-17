@@ -50,9 +50,9 @@ const Signin = () => {
       <div className="left">
         <div className="right__container">
           <h1 className="logo">
-            Event<span>Hive</span>
+            KU<span>vents</span>
           </h1>
-          <h1>Sign In to Event Hive</h1>
+          <h1>Sign In to KUvents</h1>
           {error && <div className="error">{error}</div>}
           <form onSubmit={handleSubmit}>
             <Input
@@ -80,6 +80,12 @@ const Signin = () => {
             <button className="google__button">
               <img src={images.google} alt="google" />
               <p>Signin with Google</p>
+            </button>
+          </Link>
+          <Link to="/">
+            <button className="apple__button">
+              <img src={images.apple} alt="apple" />
+              <p>Signin with Apple</p>
             </button>
           </Link>
         </div>
