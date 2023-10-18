@@ -35,8 +35,8 @@ const Header = () => {
           </div>
         </div>
         <h1>
-          Made for those <br />
-          who do
+          SEE EVENTS <br />
+          AT KU
         </h1>
       </div>
     </div>

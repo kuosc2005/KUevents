@@ -6,51 +6,52 @@ import { Dropdown } from "../../components";
 import "./DropdownContainer.scss";
 
 const DropdownContainer = () => {
-  const [colleges, setColleges] = useState([]);
+  const [schools, setSchools] = useState([]);
+  const [clubs, setClubs] = useState([]);
   const [categories, setCategories] = useState([]);
-  const [events, setEvents] = useState([]);
 
-  const [selectedCollege, setSelectedCollege] = useState("");
+  const [selectedSchools, setSelectedSchools] = useState("");
+  const [selectedClubs, setSelectedClubs] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("");
-  const [selectedStatus, setSelectedStatus] = useState("");
 
-  const handleCollegeChange = (value) => {
-    setSelectedCollege(value);
+  const handleSchoolChange = (value) => {
+    setSelectedSchools(value);
+  };
+
+  const handleClubsChange = (value) => {
+    setSelectedClubs(value);
   };
 
   const handleCategoryChange = (value) => {
     setSelectedCategory(value);
   };
 
-  const handleStatusChange = (value) => {
-    setSelectedStatus(value);
-  };
-
   const handleSearch = () => {
-    console.log("Selected College:", selectedCollege);
+    console.log("Selected School:", selectedSchools);
+    console.log("Selected Clubs:", selectedStatus);
     console.log("Selected Category:", selectedCategory);
-    console.log("Selected Status:", selectedStatus);
   };
 
   return (
     <div className="dropdown__container">
       <Dropdown
-        options={colleges}
-        label="Select College"
-        value={selectedCollege}
-        onChange={handleCollegeChange}
+        options={schools}
+        label="Select School"
+        value={selectedSchools}
+        onChange={handleSchoolChange}
+      />
+      
+      <Dropdown
+        options={clubs}
+        label="Select Clubs"
+        value={selectedClubs}
+        onChange={handleClubsChange}
       />
       <Dropdown
         options={categories}
         label="Select Category"
         value={selectedCategory}
         onChange={handleCategoryChange}
-      />
-      <Dropdown
-        options={events}
-        label="Select Status"
-        value={selectedStatus}
-        onChange={handleStatusChange}
       />
       <Link to="/search">
         <button onClick={handleSearch}>Search</button>
