@@ -95,19 +95,30 @@ const Colleges = () => {
           }}
         >
           <div
-            style={{
-              width: "100%",
-              clipPath: "circle(50.0% at 50% 50%)",
-              height: "300px",
-              background: `url(${imgArray[0]})`,
+            style={{       
+              height: "400px",
+              borderRadius: "10 px",
+              background : "#FFFFFF",
+              flex: "1 0 0",
+              width: "100%",  
             }}
           ></div>
           <div
             style={{
-              width: "100%",
-              clipPath: "polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%)",
-              height: "300px",
-              background: `url(${imgArray[1]}) center center / cover`,
+              height: "400px",
+              borderRadius: "10 px",
+              background : "#FFFFFF",
+              flex: "1 0 0",
+              width: "100%", 
+            }}
+          ></div>
+          <div
+            style={{
+              height: "400px",
+              borderRadius: "10 px",
+              background : "#FFFFFF",
+              flex: "1 0 0",
+              width: "100%", 
             }}
           ></div>
           <div
@@ -124,10 +135,38 @@ const Colleges = () => {
           ></div>
           <div
             style={{
-              width: "100%",
-              clipPath: "polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%)",
-              height: "300px",
-              background: `url(${imgArray[2]})`,
+              height: "400px",
+              borderRadius: "10 px",
+              background : "#FFFFFF",
+              flex: "1 0 0",
+              width: "100%", 
+            }}
+          ></div>
+          <div
+            style={{
+              height: "400px",
+              borderRadius: "10 px",
+              background : "#FFFFFF",
+              flex: "1 0 0",
+              width: "100%", 
+            }}
+          ></div>
+          <div
+            style={{
+              height: "400px",
+              borderRadius: "10 px",
+              background : "#FFFFFF",
+              flex: "1 0 0",
+              width: "100%", 
+            }}
+          ></div>
+          <div
+            style={{
+              height: "400px",
+              borderRadius: "10 px",
+              background : "#FFFFFF",
+              flex: "1 0 0",
+              width: "100%", 
             }}
           ></div>
         </div>
