@@ -1,0 +1,178 @@
+.navigation {
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    margin-bottom: 1.5%;
+    border-bottom: 1px solid #e6ebf4;
+}
+
+.navigation .navigation__menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: large;
+    font-weight: 500;
+}
+
+.navigation .navigation__menu .menu {
+    color: black;
+    text-decoration: none;
+}
+
+.navigation .navigation__menu .menu:hover {
+    color: #7848f4;
+}
+
+.navigation .navigation__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navigation .navigation__right {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.navigation .navigation__right img {
+    display: none;
+}
+
+.navigation .navigation__right .navigation__create {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7rem 1.5rem;
+    border-radius: 0.3rem;
+    background-color: #7848f4;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.navigation .navigation__right .navigation__menu {
+    display: none;
+}
+
+.navigation .navigation__right .navigation__profile {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.navigation .navigation__right .navigation__profile .navigation__profile__image {
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.navigation .navigation__right .navigation__profile .navigation__profile__options {
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 2rem;
+    width: 14rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05), 0 2px 6px 0 rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    outline: none;
+}
+
+.navigation .navigation__right .navigation__profile .navigation__profile__options div {
+    padding: 0.5rem;
+}
+
+.navigation .navigation__right .navigation__profile .navigation__profile__options button {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.navigation .navigation__right .navigation__profile .navigation__profile__options .navigation__profile__options__item {
+    display: block;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: #000;
+    transition-property: background-color, color;
+    transition-duration: 75ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.navigation .navigation__right .navigation__signin {
+    font-weight: 500;
+    color: #7848f4;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 0.375rem;
+    border-color: #7848f4;
+    border-width: 0.125rem;
+}
+
+.navigation .navigation__right .navigation__signup {
+    font-weight: 500;
+    background-color: #7848f4;
+    color: white;
+    padding: 0.6rem 1rem;
+    border-radius: 0.375rem;
+    border-color: #7848f4;
+    border-width: 0.125rem;
+}
+
+@media screen and (max-width: 768px) {
+    .navigation {
+        gap: 1rem;
+    }
+
+    .navigation .navigation__logo {
+        width: 8rem;
+    }
+
+    .navigation .navigation__menu {
+        display: none;
+    }
+
+    .navigation .navigation__right .navigation__create,
+    .navigation .navigation__right .navigation__profile {
+        display: none;
+    }
+
+    .navigation .navigation__right .navigation__auth {
+        font-size: small;
+    }
+
+    .navigation .navigation__right img {
+        display: block;
+        cursor: pointer;
+    }
+
+    .navigation .navigation__right .navigation__menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    .navigation .navigation__right .navigation__profile .navigation__profile__options {
+        z-index: 100;
+    }
+}

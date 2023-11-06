@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./Dropdown.scss";
+import "./Dropdown.css";
 
 const Dropdown = ({ options, label, value, onChange }) => {
   return (

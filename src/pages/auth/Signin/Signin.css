@@ -1,0 +1,250 @@
+.signin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.signin .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 40%;
+    height: 100%;
+}
+
+.signin .right img {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    object-fit: fill;
+    filter: grayscale(0.5);
+}
+
+.signin .right .content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.signin .right .content h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 49px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+}
+
+.signin .right .content p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+}
+
+.signin .right .content button {
+    padding: 15px 40px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.signin .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 60%;
+    height: 100%;
+    background: #f8f8fa;
+}
+
+.signin .left .right__container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0% 10%;
+}
+
+.signin .left .right__container .logo {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #131315;
+}
+
+.signin .left .right__container .logo span {
+    color: #7848f4;
+}
+
+.signin .left .right__container h1 {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 44px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #131315;
+}
+
+.signin .left .right__container .error {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: red;
+}
+
+.signin .left .right__container form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.signin .left .right__container form button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 40px;
+    gap: 10px;
+    background: #7848f4;
+    border-radius: 5px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    cursor: pointer;
+    border: none;
+}
+
+.signin .left .right__container p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #9e9e9e;
+}
+
+.signin .left .right__container .google__button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 30px;
+    gap: 10px;
+    background: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #e0e0e9;
+    cursor: pointer;
+}
+
+.signin .left .right__container .google__button img {
+    width: 20px;
+    height: 20px;
+}
+
+.signin .left .right__container .google__button p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #131315;
+}
+
+.signin .left .right__container .apple__button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 30px;
+    gap: 10px;
+    background: #ffffff;
+    border-radius: 5px;
+    width: 228.25px;
+    height: 51.6px;
+    border: 1px solid #e0e0e9;
+    cursor: pointer;
+}
+
+.signin .left .right__container .apple__button img {
+    width: 20px;
+    height: 20px;
+}
+
+.signin .left .right__container .apple__button p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #131315;
+}
+
+@media screen and (max-width: 768px) {
+    .signin {
+        flex-direction: column;
+    }
+
+    .signin .right {
+        display: none;
+    }
+
+    .signin .left {
+        width: 100%;
+    }
+
+    .signin .left .right__container {
+        padding: 0% 5%;
+    }
+}

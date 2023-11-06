@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 import { Dropdown } from "../../components";
-import "./DropdownContainer.scss";
+import "./DropdownContainer.css";
 
 const DropdownContainer = () => {
   const [schools, setSchools] = useState([]);

@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 
-import "./College.scss";
+import "./College.css";
 import EventCard from "../../../components/EventCard/EventCard";
 
 const Event = () => {

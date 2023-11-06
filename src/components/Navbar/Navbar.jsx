@@ -8,7 +8,7 @@ import { images } from "../../constants";
 
 axios.defaults.withCredentials = true;
 
-import "./Navbar.scss";
+import "./Navbar.css";
 
 const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
