@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./About.scss";
+import "./About.css";
 import { images } from "../../constants";
 
 const About = () => {

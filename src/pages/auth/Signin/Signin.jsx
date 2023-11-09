@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
-import "./Signin.scss";
+import "./Signin.css";
 import { Input } from "../../../components";
 import { images } from "../../../constants";
 import { authActions } from "../../../store";

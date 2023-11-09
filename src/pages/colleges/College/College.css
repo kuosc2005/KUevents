@@ -1,0 +1,97 @@
+.college__image {
+    padding: 0% 2%;
+    width: 100%;
+    height: 90vh;
+    position: relative;
+}
+
+.college__image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.college__image__button {
+    left: 4%;
+    top: 4%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    gap: 5px;
+    width: fit-content;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+}
+
+.college__image__button img {
+    width: 20px;
+    height: 20px;
+}
+
+.college__image__button p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #ffffff;
+}
+
+.college__content {
+    padding: 2% 5%;
+}
+
+.college__content__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    display: flex;
+    align-items: center;
+}
+
+.college__content__description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    color: #7e7e7e;
+}
+
+.college__events {
+    padding: 2% 5%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+.college__events__title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.college__events__title span {
+    margin-left: 1%;
+    color: #7848f4;
+}
+
+.college__events__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+}

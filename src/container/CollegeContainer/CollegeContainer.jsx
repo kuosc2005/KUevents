@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import SyncLoader from "react-spinners/SyncLoader";
 
-import "./CollegeContainer.scss";
+import "./CollegeContainer.css";
 import { images } from "../../constants";
 import { CollegeCard } from "../../components";
 
@@ -43,12 +43,12 @@ const CollegeContainer = () => {
     <div className="college__container">
       <div className="college__container__header">
         <h2>
-          College <span>Events</span>
+          Past <span>Events</span>
         </h2>
         <div className="college__container__header__search">
           <input
             type="text"
-            placeholder="Search for colleges"
+            placeholder="Search for Past Events"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
@@ -98,7 +98,7 @@ const CollegeContainer = () => {
           ) : (
             <div className="college__container__body__list__empty">
               <img src={images.dummy} alt="No College Found" />
-              <h4>No colleges found</h4>
+              <h4>No Events found</h4>
             </div>
           )}
         </div>

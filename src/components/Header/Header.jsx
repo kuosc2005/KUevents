@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import "./Header.scss";
+import "./Header.css";
 import { images } from "../../constants";
 
 const Header = () => {
@@ -35,8 +35,8 @@ const Header = () => {
           </div>
         </div>
         <h1>
-          Made for those <br />
-          who do
+          SEE EVENTS <br />
+          AT KU
         </h1>
       </div>
     </div>

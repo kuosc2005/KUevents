@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-import "./Footer.scss";
+import "./Footer.css";
 import { images } from "../../constants";
 
 const Footer = () => {
@@ -35,10 +35,10 @@ const Footer = () => {
           KU <span>vents</span>
         </h1> */}
         <Link to="/">
-        <img src={images.logo2} alt="logo" className="footer__logo" />
-      </Link>
+          <img src={images.logo} alt="logo" className="footer__logo" />
+         </Link>
       </div>
-      <div className="footer__mail">
+      {/* <div className="footer__mail">
         <input
           className="footer__mail__input"
           type="email"
@@ -49,7 +49,7 @@ const Footer = () => {
         <button className="footer__mail__button" onClick={handleClick}>
           {active ? "Subscribing..." : "Subscribe"}
         </button>
-      </div>
+      </div> */}
       <div className="footer__menu">
         <Link>
           <p>Home</p>
@@ -58,7 +58,7 @@ const Footer = () => {
           <p>About</p>
         </Link>
         <Link>
-          <p>Services</p>
+          <p>Contact Us</p>
         </Link>
         <Link>
           <p>FAQs</p>
@@ -66,16 +66,22 @@ const Footer = () => {
       </div>
       <hr className="footer__line" />
       <div className="footer__bottom">
-        <div className="footer__bottom__language">
+        {/* <div className="footer__bottom__language">
           <button>English</button>
-        </div>
+        </div> */}
         <div className="footer__bottom__copyright">
           Copyrighted © 2023 Upload by KUvents
         </div>
         <div className="footer__bottom__social">
-          <img src={images.FacebookLogo} alt="FacebookLogo" />
-          <img src={images.InstagramLogo} alt="InstagramLogo" />
-          <img src={images.LinkedinLogo} alt="LinkedinLogo" />
+          <a href="https://www.facebook.com">
+           <img src={images.FacebookLogo} alt="FacebookLogo" />
+          </a>
+          <a href="https://www.instagram.com">
+            <img src={images.InstagramLogo} alt="InstagramLogo" />
+          </a>
+          <a href="https://www.linkedin.com">
+            <img src={images.LinkedinLogo} alt="LinkedinLogo" />
+          </a>
         </div>
       </div>
     </div>

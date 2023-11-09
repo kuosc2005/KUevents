@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-import "./CreateEvent.scss";
+import "./CreateEvent.css";
 import { images } from "./../../../constants";
 
 function CreateEvent() {
