@@ -6,6 +6,7 @@ import dummy from '../assets/dummy.svg';
 import profile from '../assets/profile.svg';
 import map from '../assets/map.svg';
 import myself from '../assets/myself.svg';
+import goback from '../assets/goback.png';
 
 import image1 from '../assets/events/image1.svg';
 import image2 from '../assets/events/image2.svg';
@@ -52,6 +53,7 @@ import FacebookLogo from '../assets/icons/Phosphor icons/FacebookLogo.png';
 import LinkedinLogo from '../assets/icons/Phosphor icons/LinkedinLogo.png';
 import InstagramLogo from '../assets/icons/Phosphor icons/InstagramLogo.png';
 
+
 export default {
     logo,
     logo2,
@@ -97,5 +99,6 @@ export default {
     menu,
     map,
     vert_icon,
-    myself
+    myself,
+    goback
 };

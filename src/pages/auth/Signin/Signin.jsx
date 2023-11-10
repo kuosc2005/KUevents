@@ -45,13 +45,23 @@ const Signin = () => {
       .then(() => navigate("/"));
   };
 
+  const goBack = () => {
+    navigate("/");
+  };
+
   return (
     <div className="signin">
       <div className="left">
         <div className="right__container">
-          <h1 className="logo">
+          {/* <h1 className="logo">
             KU<span>vents</span>
-          </h1>
+          </h1> */}
+        <Link to="/">
+          <img src={images.logo} alt="logo" className="footer__logo" />
+         </Link>          
+          <button className="go-back" onClick={goBack}>
+            <img src={images.goback} alt="Go Back" />
+          </button>
           <h1>Sign In to KUvents</h1>
           {error && <div className="error">{error}</div>}
           <form onSubmit={handleSubmit}>
