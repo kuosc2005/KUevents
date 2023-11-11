@@ -53,39 +53,27 @@ const Colleges = () => {
     setFilteredColleges(colleges);
   };
 
-const containerStyle1 = {
-              
-              height: "400px",
-              borderRadius: "10 px",
-              background : "#FFFFFF",
-            borderRadius: "10px",
-            boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-              width: "50%",  
-}
-const containerStyle2 = {
-              
-              height:"400px",
-              borderRadius: "10 px",
-              background : "#FFFFFF",
-            borderRadius: "10px",
-            boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-              width: "50%",  
-}
- const textStyle = {
-  fontSize: '20px',
-  margin: '0',
-};
+  const imgArray = [images.college1, images.college2, images.college3];
 
   return (
     <div className="colleges">
       <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          gap: "20px",
+          width: "100%",
+        }}
+      >
+        <div
           style={{
             color: "black",
             fontSize: "64px",
             fontSmooth: "always",
             fontWeight: "bold",
             lineHeight: "1.2",
-            
           }}
         >
           Checkout your{" "}
@@ -98,13 +86,30 @@ const containerStyle2 = {
           </span>{" "}
           now!!
         </div>
-     
-      <div
-        style={containerStyle1}>
-          <h2 style={textStyle}>School of Engineering</h2>
-          <p>
-      This is some content inside the container. You can add text, images, and more here.
-    </p>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+            gridGap: "20px",
+            width: "100%",
+          }}
+        >
+          <div
+            style={{
+              width: "100%",
+              clipPath: "circle(50.0% at 50% 50%)",
+              height: "300px",
+              background: `url(${imgArray[0]})`,
+            }}
+          ></div>
+          <div
+            style={{
+              width: "100%",
+              clipPath: "polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%)",
+              height: "300px",
+              background: `url(${imgArray[1]}) center center / cover`,
+            }}
+          ></div>
           <div
             style={{
               position: "absolute",
@@ -117,19 +122,16 @@ const containerStyle2 = {
                 "radial-gradient(circle at center, #7848f4 0%, #7848f4 5%, rgba(120, 120, 120, 0) 40%)",
             }}
           ></div>
-          
-         
-          
-          
-        
+          <div
+            style={{
+              width: "100%",
+              clipPath: "polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%)",
+              height: "300px",
+              background: `url(${imgArray[2]})`,
+            }}
+          ></div>
+        </div>
       </div>
-      <div
-        style={containerStyle2}>
-          <h2 style={textStyle}>School of Engineering</h2>
-          <p>
-      This is some content inside the container. You can add text, images, and more here.
-    </p>
-    </div>
       <div className="colleges__header">
         <h1 className="colleges__header__name">Colleges</h1>
         <div className="colleges__header__input">
