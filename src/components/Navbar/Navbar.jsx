@@ -81,7 +81,7 @@ const Navbar = () => {
       </div>
 
       <div className="navigation__right">
-        {isLoggedIn ? (
+        {/* {isLoggedIn ? ( */}
           <>
             <Link to={"/create-event"} className="navigation__create">
               Create
@@ -173,7 +173,7 @@ const Navbar = () => {
               Register
             </Link>
           </div>
-        )}
+        )
       </div>
     </header>
   );
