@@ -1,0 +1,58 @@
+.college__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-height: 30rem;
+    padding: 1rem 1rem 1.5rem 1rem;
+    gap: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.26);
+    }
+
+    &__image {
+        img {
+            height: 15rem;
+            width: 100%;
+            border-radius: 10px 10px 0 0;
+            object-fit: cover;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 1rem;
+        width: 100%;
+        padding: 0 1rem;
+
+        &__name {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            margin-bottom: 0.5rem;
+            color: #7848f4;
+        }
+
+        &__desc {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1rem;
+            color: grey;
+        }
+
+        &__location {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #131315;
+        }
+    }
+}

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import "./Advertisement.css";
+import "./Advertisement.scss";
 import { images } from "../../constants";
 
 const Advertisement = () => {

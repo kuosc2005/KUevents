@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./CollegeCard.css";
+import "./CollegeCard.scss";
 
 const CollegeCard = ({ name, location, image, description }) => {
   return (
