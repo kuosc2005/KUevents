@@ -35,7 +35,9 @@ const About = () => {
         </span>
       </h1>
       <div className="about__creator">
+        <div className="about__creatorcontainer">
         <img src={images.felix} alt="creator" />
+        </div>
         <div className="about__creator__info">
           <h1 className="about__creator__info__name">
             <span
@@ -98,9 +100,12 @@ const About = () => {
             </a>
             </div>
         </div>
+       
       </div>
       <div className="about__creator">
+         <div className="about__creatorcontainer">
         <img src={images.samikshya} alt="creator" />
+        </div>
         <div className="about__creator__info">
           <h1 className="about__creator__info__name">
             <span
@@ -166,7 +171,9 @@ const About = () => {
       </div>
       
       <div className="about__creator">
+        <div className="about__creatorcontainer">
         <img src={images.yural} alt="creator" />
+        </div>
         <div className="about__creator__info">
           <h1 className="about__creator__info__name">
             <span
@@ -232,7 +239,9 @@ const About = () => {
       </div>
 
       <div className="about__creator">
+         <div className="about__creatorcontainer">
         <img src={images.shreela} alt="creator" />
+        </div>
         <div className="about__creator__info">
           <h1 className="about__creator__info__name">
             <span

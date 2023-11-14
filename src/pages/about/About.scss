@@ -28,11 +28,19 @@
         justify-content: center;
         gap: 3rem;
 
+        .about__creatorcontainer{
+        display : flex ;
+        height: 500px;
+        width: 250px;
+        gap: 2rem;
+        }
+
         .about__creator__info {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            gap: 1rem;
+            gap: 3rem;
+            margin-left: 100px;
 
             .about__creator__info__content {
                 font-style: italic;
