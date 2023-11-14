@@ -35,7 +35,7 @@ const About = () => {
         </span>
       </h1>
       <div className="about__creator">
-        <div className="about__creatorcontainer">
+        <div className="about__creatorcontainer1">
         <img src={images.felix} alt="creator" />
         </div>
         <div className="about__creator__info">
@@ -103,7 +103,7 @@ const About = () => {
        
       </div>
       <div className="about__creator">
-         <div className="about__creatorcontainer">
+         <div className="about__creatorcontainer2">
         <img src={images.samikshya} alt="creator" />
         </div>
         <div className="about__creator__info">
@@ -171,7 +171,7 @@ const About = () => {
       </div>
       
       <div className="about__creator">
-        <div className="about__creatorcontainer">
+        <div className="about__creatorcontainer3">
         <img src={images.yural} alt="creator" />
         </div>
         <div className="about__creator__info">
@@ -239,7 +239,7 @@ const About = () => {
       </div>
 
       <div className="about__creator">
-         <div className="about__creatorcontainer">
+         <div className="about__creatorcontainer4">
         <img src={images.shreela} alt="creator" />
         </div>
         <div className="about__creator__info">
