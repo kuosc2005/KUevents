@@ -6,7 +6,7 @@ import dummy from '../assets/dummy.svg';
 import profile from '../assets/profile.svg';
 import map from '../assets/map.svg';
 import myself from '../assets/myself.svg';
-import goback from '../assets/goback.png';
+import goback from '../assets/goback.svg';
 
 import image1 from '../assets/events/image1.svg';
 import image2 from '../assets/events/image2.svg';
