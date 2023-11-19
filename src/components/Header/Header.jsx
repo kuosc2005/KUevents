@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import "./Header.scss";
+import "./Header.css";
 import { images } from "../../constants";
 
 const Header = () => {

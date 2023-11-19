@@ -1,11 +1,12 @@
-import logo from "../assets/logo.svg";
-import logo2 from "../assets/logo2.svg";
-import logo_icon from "../assets/logo_icon.png";
-import vert_icon from "../assets/vert_icon.svg";
-import dummy from "../assets/dummy.svg";
-import profile from "../assets/profile.svg";
-import map from "../assets/map.svg";
-import myself from "../assets/myself.svg";
+import logo from '../assets/logo.svg';
+import logo2 from '../assets/logo2.svg';
+import logo_icon from '../assets/logo_icon.png';
+import vert_icon from '../assets/vert_icon.svg';
+import dummy from '../assets/dummy.svg';
+import profile from '../assets/profile.svg';
+import map from '../assets/map.svg';
+import myself from '../assets/myself.svg';
+import goback from '../assets/goback.svg';
 import felix from "../assets/felix.jpg";
 import yural from "../assets/yural.jpg";
 import shreela from "../assets/shreela.jpg";
@@ -55,54 +56,57 @@ import FacebookLogo from "../assets/icons/Phosphor icons/FacebookLogo.png";
 import LinkedinLogo from "../assets/icons/Phosphor icons/LinkedinLogo.png";
 import InstagramLogo from "../assets/icons/Phosphor icons/InstagramLogo.png";
 
+
 export default {
-  logo,
-  logo2,
-  image1,
-  image2,
-  hamburger,
-  star,
-  more_horizontal,
-  search,
-  caretleft,
-  careright,
-  plus,
-  plusprimary,
-  signup_image,
-  signin_image,
-  ad_image,
-  facebook,
-  twitter,
-  linkedin,
-  whatsapp,
-  google,
-  apple,
-  home_image,
-  dummy,
-  reset,
-  FacebookLogo,
-  LinkedinLogo,
-  InstagramLogo,
-  medium,
-  codepen,
-  figma,
-  github,
-  dribble,
-  MapPin,
-  profile,
-  logo_icon,
-  college1,
-  college2,
-  college3,
-  event,
-  error,
-  events_dashboard,
-  menu,
-  map,
-  vert_icon,
-  myself,
-  felix,
-  samikshya,
-  shreela,
-  yural,
+
+    logo,
+    logo2,
+    image1,
+    image2,
+    hamburger,
+    star,
+    more_horizontal,
+    search,
+    caretleft,
+    careright,
+    plus,
+    plusprimary,
+    signup_image,
+    signin_image,
+    ad_image,
+    facebook,
+    twitter,
+    linkedin,
+    whatsapp,
+    google,
+    apple,
+    home_image,
+    dummy,
+    reset,
+    FacebookLogo,
+    LinkedinLogo,
+    InstagramLogo,
+    medium,
+    codepen,
+    figma,
+    github,
+    dribble,
+    MapPin,
+    profile,
+    logo_icon,
+    college1,
+    college2,
+    college3,
+    event,
+    error,
+    events_dashboard,
+    menu,
+    map,
+    vert_icon,
+    myself,
+    goback,
+    felix,
+    samikshya,
+    shreela,
+    yural,
 };

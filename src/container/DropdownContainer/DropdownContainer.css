@@ -11,28 +11,28 @@
     padding: 37px 70px;
     margin-top: -72px;
     z-index: 1;
+}
 
-    button {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        height: 40px;
-        padding: 0 30px;
-        gap: 10px;
-        background: #7848f4;
-        border-radius: 5px;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 16px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        color: #ffffff;
-        cursor: pointer;
-        border: none;
-    }
+.dropdown__container button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    padding: 0 30px;
+    gap: 10px;
+    background: #7848f4;
+    border-radius: 5px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    cursor: pointer;
+    border: none;
 }
 
 @media screen and (max-width: 768px) {

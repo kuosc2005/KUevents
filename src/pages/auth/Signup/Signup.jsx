@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
-import "./Signup.scss";
+import "./Signup.css";
 import { Input } from "../../../components";
 import { images } from "../../../constants";
 
@@ -22,6 +22,7 @@ function Signup() {
       [e.target.name]: e.target.value,
     }));
   };
+
   const sendRequest = async () => {
     setLoading(true);
     const res = await axios
@@ -41,6 +42,10 @@ function Signup() {
     sendRequest().then(() => history("/signin"));
   };
 
+  const goBack = () => {
+    history("/");
+  };
+
   return (
     <div className="signup">
       <div className="left">
@@ -56,9 +61,15 @@ function Signup() {
 
       <div className="right">
         <div className="right__container">
-          <h1 className="logo">
+          {/* <h1 className="logo">
             KU<span>vents</span>
-          </h1>
+          </h1> */}
+        <Link to="/">
+          <img src={images.logo} alt="logo" className="footer__logo" />
+         </Link>
+          <button className="go-back" onClick={goBack}>
+            <img src={images.goback} alt="Go Back" />
+          </button>
           <h1>Sign Up to KUvents</h1>
           {error && <div className="error">{error}</div>}
           <form onSubmit={handleSubmit}>

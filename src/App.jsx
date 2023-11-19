@@ -56,7 +56,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
 
-        {isLoggedIn && (
+        {/* {isLoggedIn && ( */}
           <>
             <Route element={<Layout />}>
               <Route path="/dashboard" element={<User />} />
@@ -69,7 +69,7 @@ function App() {
             </Route>
             <Route path="/create-event" element={<CreateEvent />} />
           </>
-        )}
+        {/* )} */}
 
         <Route path="/*" element={<Error />} />
       </Routes>

@@ -8,7 +8,7 @@ import { images } from "../../constants";
 
 axios.defaults.withCredentials = true;
 
-import "./Navbar.scss";
+import "./Navbar.css";
 
 const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -67,7 +67,7 @@ const Navbar = () => {
 
       <div className="navigation__menu">
         <Link to={"/colleges"} className="menu">
-          Schools
+          Colleges
         </Link>
         <Link to={"events"} className="menu">
           Events

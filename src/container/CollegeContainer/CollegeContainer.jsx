@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import SyncLoader from "react-spinners/SyncLoader";
 
-import "./CollegeContainer.scss";
+import "./CollegeContainer.css";
 import { images } from "../../constants";
 import { CollegeCard } from "../../components";
 
