@@ -28,11 +28,40 @@
         justify-content: center;
         gap: 3rem;
 
+        .about__creatorcontainer1{
+        display : flex ;
+        height: 400px;
+        width: 250px;
+        gap: 2rem;
+        }
+
+        .about__creatorcontainer2{
+        display : flex ;
+        height: 350px;
+        width: 250px;
+        gap: 2rem;
+        }
+
+        .about__creatorcontainer3{
+        display : flex ;
+        height: 400px;
+        width: 300px;
+        gap: 2rem;
+        }
+
+        .about__creatorcontainer4{
+        display : flex ;
+        height: 350px;
+        width: 250px;
+        gap: 2rem;
+        }
+
         .about__creator__info {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            gap: 1rem;
+            gap: 3rem;
+            margin-left: 100px;
 
             .about__creator__info__content {
                 font-style: italic;
