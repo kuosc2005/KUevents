@@ -60,7 +60,7 @@ const EventContainer = () => {
         <div className="input">
           <input
             type="text"
-            placeholder="Search for events"
+            placeholder="Search for event"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />

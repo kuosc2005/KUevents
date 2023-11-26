@@ -82,7 +82,7 @@ const Colleges = () => {
               color: "#7848F4",
             }}
           >
-            college events
+            club events
           </span>{" "}
           now!!
         </div>
@@ -133,13 +133,13 @@ const Colleges = () => {
         </div>
       </div>
       <div className="colleges__header">
-        <h1 className="colleges__header__name">Colleges</h1>
+        <h1 className="colleges__header__name">Clubes</h1>
         <div className="colleges__header__input">
           <input
             type="text"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            placeholder="Search for colleges"
+            placeholder="Search for club"
             className="colleges__header__input__search"
           />
           <div className="colleges__header__input__icon" onClick={handleSearch}>

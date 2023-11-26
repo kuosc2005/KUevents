@@ -43,12 +43,12 @@ const CollegeContainer = () => {
     <div className="college__container">
       <div className="college__container__header">
         <h2>
-          Past <span>Events</span>
+          School of <span>KU</span>
         </h2>
         <div className="college__container__header__search">
           <input
             type="text"
-            placeholder="Search for Past Events"
+            placeholder="Search for School"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
