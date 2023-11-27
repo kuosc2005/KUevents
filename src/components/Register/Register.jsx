@@ -44,9 +44,7 @@ const Register = ({ date, time, eventId }) => {
       <div className="ticket__promote">
         <button>Program promoter</button>
       </div>
-      <div className="ticket__refund">
-        <p>Refund Policy</p>
-      </div>
+      
     </div>
   );
 };

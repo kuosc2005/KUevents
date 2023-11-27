@@ -14,24 +14,24 @@ const Colleges = () => {
   const [loading, setLoading] = useState(false);
   const [filteredColleges, setFilteredColleges] = useState(colleges);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      setLoading(true);
-      try {
-        const collegesResponse = await axios.get(
-          `${import.meta.env.VITE_BACKEND_HOST}/colleges`
-        );
-        const collegesData = collegesResponse.data;
-        setColleges(collegesData);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-        throw error;
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchData();
-  }, []);
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     setLoading(true);
+  //     try {
+  //       const collegesResponse = await axios.get(
+  //         `${import.meta.env.VITE_BACKEND_HOST}/colleges`
+  //       );
+  //       const collegesData = collegesResponse.data;
+  //       setColleges(collegesData);
+  //     } catch (error) {
+  //       console.error("Error fetching data:", error);
+  //       throw error;
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   };
+  //   fetchData();
+  // }, []);
 
   useEffect(() => {
     const filtered = colleges.filter((college) =>
@@ -53,7 +53,7 @@ const Colleges = () => {
     setFilteredColleges(colleges);
   };
 
-  const imgArray = [images.college1, images.college2, images.college3];
+  // const imgArray = [images.college1, images.college2, images.college3];
 
   return (
     <div className="colleges">
@@ -99,7 +99,7 @@ const Colleges = () => {
               width: "100%",
               clipPath: "circle(50.0% at 50% 50%)",
               height: "300px",
-              background: `url(${imgArray[0]})`,
+              background: `url(https://res.cloudinary.com/dtauaal8p/image/upload/v1700827040/KUvents/images/kusom)`,
             }}
           ></div>
           <div
@@ -107,7 +107,8 @@ const Colleges = () => {
               width: "100%",
               clipPath: "polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%)",
               height: "300px",
-              background: `url(${imgArray[1]}) center center / cover`,
+              background: `url(
+                https://res.cloudinary.com/dtauaal8p/image/upload/v1700827040/KUvents/images/kusol) center center / cover`,
             }}
           ></div>
           <div
@@ -127,13 +128,14 @@ const Colleges = () => {
               width: "100%",
               clipPath: "polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%)",
               height: "300px",
-              background: `url(${imgArray[2]})`,
+              background: `url(
+                https://res.cloudinary.com/dtauaal8p/image/upload/v1700827040/KUvents/images/kusoe)`,
             }}
           ></div>
         </div>
       </div>
       <div className="colleges__header">
-        <h1 className="colleges__header__name">Clubes</h1>
+        <h1 className="colleges__header__name">Clubs</h1>
         <div className="colleges__header__input">
           <input
             type="text"
