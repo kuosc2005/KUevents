@@ -2,7 +2,7 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
-import { Navbar, Footer, Payment, Success, Cancel } from "./components";
+import { Navbar, Footer } from "./components";
 import {
   Home,
   Contact,
@@ -47,8 +47,8 @@ function App() {
 
         <Route path="/events" element={<Events />} />
         <Route path="/events/:id" element={<Event />} />
-        <Route path="/events/:id/payment/success" element={<Success />} />
-        <Route path="/events/:id/payment/cancel" element={<Cancel />} />
+        {/* <Route path="/events/:id/payment/success" element={<Success />} />
+        <Route path="/events/:id/payment/cancel" element={<Cancel />} /> */}
 
         <Route path="/colleges" element={<Colleges />} />
         <Route path="/colleges/:id" element={<College />} />
