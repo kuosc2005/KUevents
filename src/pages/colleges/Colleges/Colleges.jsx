@@ -3,7 +3,7 @@ import SyncLoader from "react-spinners/SyncLoader";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-import "./Colleges.css";
+import "./Colleges.scss";
 
 import { CollegeCard } from "../../../components";
 import { images } from "../../../constants";

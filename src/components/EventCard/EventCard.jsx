@@ -2,7 +2,7 @@ import React from "react";
 
 import formatDate from "../../utils/FormatDate";
 
-import "./EventCard.css";
+import "./EventCard.scss";
 
 const EventCard = ({ name, date, time, location, img, description }) => {
   const maxLength = 40;

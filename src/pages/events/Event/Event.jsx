@@ -5,7 +5,7 @@ import SyncLoader from "react-spinners/SyncLoader";
 
 import { AiOutlineCalendar, AiOutlineClockCircle } from "react-icons/ai";
 
-import "./Event.css";
+import "./Event.scss";
 import { images } from "../../../constants";
 import { Register } from "../../../components";
 import { EventContainer } from "../../../container";

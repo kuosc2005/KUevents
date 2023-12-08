@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
-import "./Signup.css";
+import "./Signup.scss";
 import { Input } from "../../../components";
 import { images } from "../../../constants";
 

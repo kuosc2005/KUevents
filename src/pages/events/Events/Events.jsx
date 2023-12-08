@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import SyncLoader from "react-spinners/SyncLoader";
 
-import "./Events.css";
+import "./Events.scss";
 import { EventCard } from "../../../components";
 import { images } from "../../../constants";
 

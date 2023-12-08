@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-import "./Register.css";
+import "./Register.scss";
 import { images } from "../../constants";
 
 const Register = ({ date, time, eventId }) => {
