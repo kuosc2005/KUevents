@@ -3,60 +3,60 @@ import SyncLoader from "react-spinners/SyncLoader";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-import "./Colleges.scss";
+import "./Club.scss";
 
-import { CollegeCard } from "../../../components";
+import { ClubCard } from "../../../components";
 import { images } from "../../../constants";
 
-const Colleges = () => {
-  const [colleges, setColleges] = useState([]);
+const Clubs = () => {
+  const [clubs, setClubs] = useState([]);
   const [search, setSearch] = useState("");
   const [loading, setLoading] = useState(false);
-  const [filteredColleges, setFilteredColleges] = useState(colleges);
-
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     setLoading(true);
-  //     try {
-  //       const collegesResponse = await axios.get(
-  //         `${import.meta.env.VITE_BACKEND_HOST}/colleges`
-  //       );
-  //       const collegesData = collegesResponse.data;
-  //       setColleges(collegesData);
-  //     } catch (error) {
-  //       console.error("Error fetching data:", error);
-  //       throw error;
-  //     } finally {
-  //       setLoading(false);
-  //     }
-  //   };
-  //   fetchData();
-  // }, []);
+  const [filteredClubs, setFilteredClubs] = useState(clubs);
 
   useEffect(() => {
-    const filtered = colleges.filter((college) =>
-      college.name.toLowerCase().includes(search.toLowerCase())
+    const fetchData = async () => {
+      setLoading(true);
+      try {
+        const clubsResponse = await axios.get(
+          `${import.meta.env.VITE_BACKEND_HOST}/clubs`
+        );
+        const clubsData = clubsResponse.data;
+        setClubs(clubsData);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+        throw error;
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchData();
+  }, []);
+
+  useEffect(() => {
+    const filtered = clubs.filter((club) =>
+      club.name.toLowerCase().includes(search.toLowerCase())
     );
 
-    setFilteredColleges(filtered);
-  }, [search, colleges]);
+    setFilteredClubs(filtered);
+  }, [search, clubs]);
 
   const handleSearch = () => {
-    const filtered = colleges.filter((college) =>
-      college.name.toLowerCase().includes(search.toLowerCase())
+    const filtered = clubs.filter((club) =>
+      club.name.toLowerCase().includes(search.toLowerCase())
     );
-    setFilteredColleges(filtered);
+    setFilteredClubs(filtered);
   };
 
   const handleReset = () => {
     setSearch("");
-    setFilteredColleges(colleges);
+    setFilteredClubs(clubs);
   };
 
   // const imgArray = [images.college1, images.college2, images.college3];
 
   return (
-    <div className="colleges">
+    <div className="clubs">
       <div
         style={{
           display: "flex",
@@ -134,22 +134,22 @@ const Colleges = () => {
           ></div>
         </div>
       </div>
-      <div className="colleges__header">
-        <h1 className="colleges__header__name">Clubs</h1>
-        <div className="colleges__header__input">
+      <div className="clubs__header">
+        <h1 className="clubs__header__name">Clubs</h1>
+        <div className="clubs__header__input">
           <input
             type="text"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search for club"
-            className="colleges__header__input__search"
+            className="clubs__header__input__search"
           />
-          <div className="colleges__header__input__icon" onClick={handleSearch}>
+          <div className="clubs__header__input__icon" onClick={handleSearch}>
             <img src={images.search} alt="Search" />
           </div>
           {search && (
             <div
-              className="colleges__header__input__icon"
+              className="clubs__header__input__icon"
               onClick={handleReset}
             >
               <img src={images.reset} alt="Reset" />
@@ -174,14 +174,14 @@ const Colleges = () => {
           />
         </div>
       ) : (
-        <div className="colleges__container">
-          {filteredColleges.map((college) => (
-            <Link key={college._id} to={`/colleges/${college._id}`}>
-              <CollegeCard
-                name={college.name}
-                location={college.location}
-                image={college.imgUrl}
-                description={college.description.substring(0, 100) + "..."}
+        <div className="clubs__container">
+          {filteredClubs.map((club) => (
+            <Link key={club._id} to={`/clubs/${club._id}`}>
+              <ClubCard
+                name={club.name}
+                location={club.location}
+                image={club.imgUrl}
+                description={club.description.substring(0, 100) + "..."}
               />
             </Link>
           ))}
@@ -191,4 +191,4 @@ const Colleges = () => {
   );
 };
 
-export default Colleges;
+export default Clubs;

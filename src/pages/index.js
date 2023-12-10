@@ -9,7 +9,7 @@ import CreateEvent from "./events/CreateEvent/CreateEvent";
 import Event from "./events/Event/Event";
 import Events from "./events/Events/Events";
 
-import Colleges from "./colleges/Colleges/Colleges";
+import Clubs from "./colleges/Club/Club";
 import College from "./colleges/College/College";
 
 import Layout from "./dashboard/Layout";
@@ -31,7 +31,7 @@ export {
     UserProfile,
     Event,
     Events,
-    Colleges,
+    Clubs,
     College,
     Layout,
     UserMessages,
@@ -40,4 +40,5 @@ export {
     Scheduler,
     Error,
     Tasks,
+    
 };

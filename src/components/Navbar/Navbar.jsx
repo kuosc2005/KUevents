@@ -66,7 +66,7 @@ const Navbar = () => {
       </Link>
 
       <div className="navigation__menu">
-        <Link to={"/colleges"} className="menu">
+        <Link to={"/clubs"} className="menu">
           Clubs
         </Link>
         <Link to={"events"} className="menu">

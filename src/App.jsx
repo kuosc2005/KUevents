@@ -12,8 +12,9 @@ import {
   CreateEvent,
   Events,
   Event,
-  Colleges,
-  College,
+  // Colleges,
+  Clubs,
+  // College,
   Layout,
   User,
   UserProfile,
@@ -50,8 +51,8 @@ function App() {
         {/* <Route path="/events/:id/payment/success" element={<Success />} />
         <Route path="/events/:id/payment/cancel" element={<Cancel />} /> */}
 
-        <Route path="/colleges" element={<Colleges />} />
-        <Route path="/colleges/:id" element={<College />} />
+        <Route path="/clubs" element={<Clubs />} />
+        <Route path="/clubs/:id" element={<Clubs />} />
 
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
