@@ -1,21 +1,53 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-
 import { Dropdown } from "../../components";
 import "./DropdownContainer.scss";
 
 const DropdownContainer = () => {
-  const [schools, setSchools] = useState([]);
+  const [colleges, setColleges] = useState([]);
   const [clubs, setClubs] = useState([]);
   const [categories, setCategories] = useState([]);
 
-  const [selectedSchools, setSelectedSchools] = useState("");
+  const [selectedCollege, setSelectedCollege] = useState("");
   const [selectedClubs, setSelectedClubs] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("");
 
-  const handleSchoolChange = (value) => {
-    setSelectedSchools(value);
+  useEffect(() => {
+    const fetchColleges = async () => {
+      try {
+        const collegesResponse = await axios.get(
+          `${import.meta.env.VITE_BACKEND_HOST}/colleges`
+        );
+        setColleges(collegesResponse.data);
+      } catch (error) {
+        console.error("Error fetching colleges:", error);
+      }
+    };
+
+    const fetchClubs = async () => {
+      try {
+        const clubsResponse = await axios.get(
+          `${import.meta.env.VITE_BACKEND_HOST}/clubs`
+        );
+        setClubs(clubsResponse.data);
+      } catch (error) {
+        console.error("Error fetching clubs:", error);
+      }
+    };
+
+    const fetchCategories = async () => {
+      // Fetch categories data
+      // ...
+    };
+
+    fetchColleges();
+    fetchClubs();
+    fetchCategories();
+  }, []);
+
+  const handleCollegeChange = (value) => {
+    setSelectedCollege(value);
   };
 
   const handleClubsChange = (value) => {
@@ -27,20 +59,19 @@ const DropdownContainer = () => {
   };
 
   const handleSearch = () => {
-    console.log("Selected School:", selectedSchools);
-    console.log("Selected Clubs:", selectedStatus);
+    console.log("Selected College:", selectedCollege);
+    console.log("Selected Clubs:", selectedClubs);
     console.log("Selected Category:", selectedCategory);
   };
 
   return (
     <div className="dropdown__container">
       <Dropdown
-        options={schools}
+        options={colleges}
         label="Select School"
-        value={selectedSchools}
-        onChange={handleSchoolChange}
+        value={selectedCollege}
+        onChange={handleCollegeChange}
       />
-      
       <Dropdown
         options={clubs}
         label="Select Clubs"
