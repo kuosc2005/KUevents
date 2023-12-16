@@ -12,7 +12,7 @@ const About = () => {
         provide a comprehensive platform for colleges to organize, manage and
         promote their events. The platform aims to streamline the event
         management process by providing tools and features to effectively plan,
-        coordinate, and execute events. With Event Hive, colleges can create
+        coordinate, and execute events. With KUvents, organizers can create
         events, manage registrations, and promote their events to a wider
         audience.
         <br />
@@ -20,8 +20,7 @@ const About = () => {
         KUvents is designed to be user-friendly, flexible, and customizable
         to meet the specific needs of different colleges. The platform enables
         colleges to manage multiple events simultaneously and provides real-time
-        updates on event progress. By leveraging the latest technologies, Event
-        Hive promises to deliver a seamless and engaging experience to both
+        updates on event progress. By leveraging the latest technologies, KUvents promises to deliver a seamless and engaging experience to both
         event organizers and attendees.
       </p>
       <h1 className="about__heading">

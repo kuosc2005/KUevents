@@ -177,13 +177,14 @@ const Clubs = () => {
         <div className="clubs__container">
           {filteredClubs.map((club) => (
             <Link key={club._id} to={`/clubs/${club._id}`}>
-              <ClubCard
-                name={club.name}
-                location={club.location}
-                image={club.imgUrl}
-                description={club.description.substring(0, 100) + "..."}
-              />
-            </Link>
+            <ClubCard
+              name={club.name}
+              location={club.location}
+              image={club.imgUrl}
+              description={club.description ? club.description.substring(0, 100) + "..." : ""}
+            />
+          </Link>
+          
           ))}
         </div>
       )}
