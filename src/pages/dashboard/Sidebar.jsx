@@ -68,8 +68,8 @@ const Sidebar = ({ user, isSiderOpen, setIsSiderOpen }) => {
         <div className="sidebar__header__logo">
           <Link to="/">
             <h1>
-              <span style={{ color: "#000000" }}>Event</span>{" "}
-              <span style={{ color: "#7848f4" }}>Hive</span>
+              <span style={{ color: "#000000" }}>KU</span>{""}
+              <span style={{ color: "#7848f4" }}>vents</span>
             </h1>
           </Link>
         </div>

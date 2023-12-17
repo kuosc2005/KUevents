@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 
 import Sidebar from "./Sidebar";
 
+
 const Layout = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+
   return (
     <div
       style={{
@@ -47,7 +49,22 @@ const Layout = ({ children }) => {
             zIndex: 100,
           }}
         >
-          Header
+          <Link to="/clubs" style={{ marginRight: "1rem" }}>
+            Clubs
+          </Link>
+          <Link to="/events" style={{ marginRight: "1rem" }}>
+            Events
+          </Link>
+          <Link to="/about" style={{ marginRight: "1rem" }}>
+            About
+          </Link>
+          <Link to="/contact" style={{ marginRight: "1rem" }}>
+            Contact
+          </Link>
+          <Link to="/create-event" style={{ marginRight: "1rem" }}>
+            Create
+          </Link>
+          {/* <button onClick=Add sign out logic here>Sign out</button> */}
         </div>
         {children}
         <Outlet />

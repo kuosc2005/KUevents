@@ -99,7 +99,7 @@ function Signup() {
             />
             <button type="submit">{loading ? "Loading..." : "Signup"}</button>
           </form>
-          <p>Or</p>
+          {/* <p>Or</p>
           <Link to="/">
             <button className="google__button">
               <img src={images.google} alt="google" />
@@ -111,7 +111,7 @@ function Signup() {
               <img src={images.apple} alt="apple" />
               <p>Signin with Apple</p>
             </button>
-          </Link>
+          </Link> */}
         </div>
       </div>
     </div>

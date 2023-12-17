@@ -85,7 +85,7 @@ const Signin = () => {
               {loading ? "Signing in..." : "Signin"}
             </button>
           </form>
-          <p>Or</p>
+          {/* <p>Or</p>
           <Link to="/">
             <button className="google__button">
               <img src={images.google} alt="google" />
@@ -97,7 +97,7 @@ const Signin = () => {
               <img src={images.apple} alt="apple" />
               <p>Signin with Apple</p>
             </button>
-          </Link>
+          </Link> */}
         </div>
       </div>
 
