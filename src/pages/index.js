@@ -14,10 +14,10 @@ import College from "./colleges/College/College";
 
 import Layout from "./dashboard/Layout";
 import UserEvents from "./dashboard/Events";
-import UserMessages from "./dashboard/Messages";
+
 import UserProfile from "./dashboard/Profile";
 import User from "./dashboard/User";
-import Scheduler from "./dashboard/Scheduler";
+
 import Tasks from "./dashboard/Tasks";
 import Error from "./error/Error";
 
@@ -34,10 +34,10 @@ export {
     Clubs,
     College,
     Layout,
-    UserMessages,
+
     UserEvents,
     User,
-    Scheduler,
+
     Error,
     Tasks,
     

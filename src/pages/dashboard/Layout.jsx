@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Outlet, Link } from "react-router-dom";
 
 import Sidebar from "./Sidebar";
+import "./styles.scss";
 
 
 const Layout = ({ children }) => {
@@ -15,6 +16,7 @@ const Layout = ({ children }) => {
         width: "100%",
       }}
     >
+      
       <Sidebar
         user={{}} // data is the user data from the context
         isSidebarOpen={isSidebarOpen}
@@ -41,7 +43,7 @@ const Layout = ({ children }) => {
             justifyContent: "space-between",
             alignItems: "center",
             padding: "1.5rem",
-            backgroundColor: "#ffffff",
+            backgroundColor: "#7848f4",
             position: "fixed",
             top: 0,
             right: 0,
@@ -49,23 +51,26 @@ const Layout = ({ children }) => {
             zIndex: 100,
           }}
         >
-          <Link to="/clubs" style={{ marginRight: "1rem" }}>
+           
+          <Link to="/clubs" className="clubs1">
             Clubs
           </Link>
-          <Link to="/events" style={{ marginRight: "1rem" }}>
+          <Link to="/events" className="events1">
             Events
           </Link>
-          <Link to="/about" style={{ marginRight: "1rem" }}>
+          <Link to="/about" className="about1">
             About
           </Link>
-          <Link to="/contact" style={{ marginRight: "1rem" }}>
+          <Link to="/contact" className="contact1">
             Contact
           </Link>
-          <Link to="/create-event" style={{ marginRight: "1rem" }}>
+          <Link to="/create-event" className="create1">
             Create
           </Link>
-          {/* <button onClick=Add sign out logic here>Sign out</button> */}
-        </div>
+          <Link to="/" className="signout1">
+            Sign Out
+          </Link>
+          </div>
         {children}
         <Outlet />
       </div>

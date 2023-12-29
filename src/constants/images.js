@@ -11,6 +11,7 @@ import felix from "../assets/felix.jpg";
 import yural from "../assets/yural.jpg";
 import shreela from "../assets/shreela.jpg";
 import samikshya from "../assets/samikshya.jpg";
+import avatar from "../assets/profile.png";
 
 import image1 from "../assets/events/image1.svg";
 import image2 from "../assets/events/image2.svg";
@@ -109,4 +110,5 @@ export default {
     samikshya,
     shreela,
     yural,
+    avatar,
 };

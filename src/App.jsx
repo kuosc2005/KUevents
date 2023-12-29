@@ -19,8 +19,7 @@ import {
   User,
   UserProfile,
   UserEvents,
-  UserMessages,
-  Scheduler,
+
   Error,
   Tasks,
 } from "./pages";
@@ -62,9 +61,9 @@ function App() {
             <Route element={<Layout />}>
               <Route path="/dashboard" element={<User />} />
               <Route path="/dashboard/events" element={<UserEvents />} />
-              <Route path="/dashboard/scheduler" element={<Scheduler />} />
+
               <Route path="/dashboard/task" element={<Scheduler />} />
-              <Route path="/dashboard/messages" element={<UserMessages />} />
+
               <Route path="/dashboard/profile" element={<UserProfile />} />
               <Route path="/dashboard/tasks" element={<Tasks />} />
             </Route>

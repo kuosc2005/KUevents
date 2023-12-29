@@ -8,43 +8,46 @@ const DropdownContainer = () => {
   const [colleges, setColleges] = useState([]);
   const [clubs, setClubs] = useState([]);
   const [categories, setCategories] = useState([]);
+  const [events, setEvents] = useState([]); // Add state for events
 
   const [selectedCollege, setSelectedCollege] = useState("");
   const [selectedClubs, setSelectedClubs] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("");
+  const [filteredEvents, setFilteredEvents] = useState([]);
 
   useEffect(() => {
-    const fetchColleges = async () => {
+    const fetchData = async () => {
       try {
         const collegesResponse = await axios.get(
           `${import.meta.env.VITE_BACKEND_HOST}/colleges`
         );
         setColleges(collegesResponse.data);
-      } catch (error) {
-        console.error("Error fetching colleges:", error);
-      }
-    };
 
-    const fetchClubs = async () => {
-      try {
         const clubsResponse = await axios.get(
           `${import.meta.env.VITE_BACKEND_HOST}/clubs`
         );
         setClubs(clubsResponse.data);
+
+        // Fetch events data and set it to the state
+        const eventsResponse = await axios.get(
+          `${import.meta.env.VITE_BACKEND_HOST}/events`
+        );
+        setEvents(eventsResponse.data);
       } catch (error) {
-        console.error("Error fetching clubs:", error);
+        console.error("Error fetching data:", error);
       }
     };
 
-    const fetchCategories = async () => {
-      // Fetch categories data
-      // ...
-    };
-
-    fetchColleges();
-    fetchClubs();
-    fetchCategories();
+    fetchData();
   }, []);
+
+  useEffect(() => {
+    // Filter events based on selected college
+    const filtered = events.filter((event) =>
+      event.college === selectedCollege
+    );
+    setFilteredEvents(filtered);
+  }, [selectedCollege, events]);
 
   const handleCollegeChange = (value) => {
     setSelectedCollege(value);
@@ -62,6 +65,7 @@ const DropdownContainer = () => {
     console.log("Selected College:", selectedCollege);
     console.log("Selected Clubs:", selectedClubs);
     console.log("Selected Category:", selectedCategory);
+    console.log("Filtered Events:", filteredEvents);
   };
 
   return (
@@ -84,9 +88,7 @@ const DropdownContainer = () => {
         value={selectedCategory}
         onChange={handleCategoryChange}
       />
-      <Link to="/search">
-        <button onClick={handleSearch}>Search</button>
-      </Link>
+      <button onClick={handleSearch}>Search</button>
     </div>
   );
 };

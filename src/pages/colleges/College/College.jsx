@@ -90,7 +90,7 @@ const Event = () => {
       {collegeData.events.length !== 0 ? (
         <div className="college__events">
           <div className="college__events__title">
-            Upcoming <span>Events</span>
+            Upcomingg <span>Events</span>
           </div>
           <div className="college__events__list">
             {collegeEvents.reverse().map((event) => (

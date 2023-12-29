@@ -25,7 +25,7 @@ const Sidebar = ({ user, isSiderOpen, setIsSiderOpen }) => {
       path: "/dashboard/tasks",
     },
     // {
-    //   text: "Messages",
+    //   text: "Calender",
     //   path: "/dashboard/messages",
     // },
     {
