@@ -12,14 +12,15 @@ import {
   CreateEvent,
   Events,
   Event,
-  // Colleges,
+  Colleges,
   Clubs,
-  // College,
+  Club,
+  College,
   Layout,
   User,
   UserProfile,
   UserEvents,
-
+  Search,
   Error,
   Tasks,
 } from "./pages";
@@ -44,6 +45,7 @@ function App() {
 
         <Route path="/signin" element={<Signin />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/search" element={<Search />} />
 
         <Route path="/events" element={<Events />} />
         <Route path="/events/:id" element={<Event />} />
@@ -52,6 +54,8 @@ function App() {
 
         <Route path="/clubs" element={<Clubs />} />
         <Route path="/clubs/:id" element={<Clubs />} />
+        <Route path="/colleges" element={<Colleges />} />
+        <Route path="/colleges/:id" element={<College />} />
 
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />

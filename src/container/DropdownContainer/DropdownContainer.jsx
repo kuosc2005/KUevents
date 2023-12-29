@@ -7,12 +7,12 @@ import "./DropdownContainer.scss";
 const DropdownContainer = () => {
   const [colleges, setColleges] = useState([]);
   const [clubs, setClubs] = useState([]);
-  const [categories, setCategories] = useState([]);
+  // const [categories, setCategories] = useState([]);
   const [events, setEvents] = useState([]); // Add state for events
 
   const [selectedCollege, setSelectedCollege] = useState("");
   const [selectedClubs, setSelectedClubs] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("");
+  // const [selectedCategory, setSelectedCategory] = useState("");
   const [filteredEvents, setFilteredEvents] = useState([]);
 
   useEffect(() => {
@@ -57,14 +57,14 @@ const DropdownContainer = () => {
     setSelectedClubs(value);
   };
 
-  const handleCategoryChange = (value) => {
-    setSelectedCategory(value);
-  };
+  // const handleCategoryChange = (value) => {
+  //   setSelectedCategory(value);
+  // };
 
   const handleSearch = () => {
     console.log("Selected College:", selectedCollege);
     console.log("Selected Clubs:", selectedClubs);
-    console.log("Selected Category:", selectedCategory);
+    // console.log("Selected Category:", selectedCategory);
     console.log("Filtered Events:", filteredEvents);
   };
 
@@ -82,13 +82,9 @@ const DropdownContainer = () => {
         value={selectedClubs}
         onChange={handleClubsChange}
       />
-      <Dropdown
-        options={categories}
-        label="Select Category"
-        value={selectedCategory}
-        onChange={handleCategoryChange}
-      />
-      <button onClick={handleSearch}>Search</button>
+        <Link to="/search">
+        <button onClick={handleSearch}>Search</button>
+      </Link>
     </div>
   );
 };

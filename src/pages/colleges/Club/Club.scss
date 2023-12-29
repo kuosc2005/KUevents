@@ -1,49 +1,102 @@
-.clubs {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-
-    padding: 2% 5%;
-    gap: 20px;
-
-    &__header {
+.club {
+    &__image {
+        padding: 0% 2%;
         width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 1rem;
+        height: 90vh;
+        position: relative;
 
-        &__name {
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            object-fit: cover;
         }
 
-        &__input {
-            width: 30%;
+        &__button {
+            left: 4%;
+            top: 4%;
             display: flex;
-            justify-content: space-between;
+            flex-direction: row;
+            justify-content: center;
             align-items: center;
-            gap: 10px;
+            padding: 1rem 1.5rem;
+            gap: 5px;
 
-            &__icon {
-                width: 15%;
-                height: 46px;
-                background: #7848f4;
-                border-radius: 5px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                cursor: pointer;
+            width: fit-content;
+
+            position: absolute;
+
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 5px;
+
+            img {
+                width: 20px;
+                height: 20px;
+            }
+
+            p {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19px;
+                color: #ffffff;
             }
         }
     }
 
-    &__container {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        grid-gap: 20px;
-        justify-items: center;
-        align-items: center;
+    &__content {
+        padding: 2% 5%;
+
+        &__title {
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 44px;
+            display: flex;
+            align-items: center;
+        }
+
+        &__description {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            display: flex;
+            align-items: center;
+            color: #7e7e7e;
+        }
+    }
+
+    &__events {
+        padding: 2% 5%;
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 2rem;
+
+        &__title {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 44px;
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: flex-start;
+
+            span {
+                margin-left: 1%;
+                color: #7848f4;
+            }
+        }
+
+        &__list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-gap: 20px;
+            justify-items: center;
+            align-items: center;
+            width: 100%;
+        }
     }
 }

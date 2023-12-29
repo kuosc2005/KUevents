@@ -1,5 +1,7 @@
+// Navbar.jsx
+
 import React, { useState, useEffect, useRef } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 
@@ -17,6 +19,7 @@ const Navbar = () => {
 
   const dispatch = useDispatch();
   const isLoggedIn = useSelector((state) => state.isLoggedIn);
+  const [username, setUsername] = useState(""); // Add username state
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -41,7 +44,7 @@ const Navbar = () => {
         withCredentials: true,
       }
     );
-    if (res.status == 200) {
+    if (res.status === 200) {
       return res;
     }
     return new Error("Unable to Logout. Please try again");
@@ -50,6 +53,22 @@ const Navbar = () => {
   const handleLogout = () => {
     sendLogoutReq().then(() => dispatch(authActions.logout()));
   };
+
+  useEffect(() => {
+    const fetchUsername = async () => {
+      try {
+        const response = await axios.get(
+          `${import.meta.env.VITE_BACKEND_HOST}/users/user`
+        );
+        const user = response.data.user;
+        setUsername(user.name);
+      } catch (error) {
+        console.error("Error fetching username:", error);
+      }
+    };
+
+    fetchUsername();
+  }, []);
 
   useEffect(() => {
     window.addEventListener("click", handleClickOutside);
@@ -83,6 +102,9 @@ const Navbar = () => {
       <div className="navigation__right">
         {isLoggedIn ? (
           <>
+            <div className="navigation__welcome">
+              Welcome, {username}!
+            </div>
             <Link to={"/create-event"} className="navigation__create">
               Create
             </Link>
