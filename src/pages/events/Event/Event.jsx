@@ -105,7 +105,7 @@ const Event = () => {
               {truncatedString}
             </div>
             <div className="register__header__detail__content__college">
-              {college.name}
+              {colleges.name}
             </div>
             <div className="register__header__detail__content__description">
               {event.description.slice(0, 250) + "..."}
@@ -224,7 +224,7 @@ const Event = () => {
                 fontSize: "1.2rem",
                 color: "gray",
               }}
-              href={college.link}
+              href={colleges.link}
             >
               College Website
             </a>
@@ -251,7 +251,7 @@ const Event = () => {
                   color: "#7848f4",
                 }}
               >
-                {college.location}
+                {colleges.location}
               </span>
             </p>
             <h3>Previous events</h3>
@@ -262,24 +262,34 @@ const Event = () => {
                 gap: "1rem",
               }}
             >
-              {college.fests.map((fest) => {
-                return (
-                  <h4
-                    style={{
-                      backgroundColor: "#7848f4",
-                      width: "fit-content",
-                      fontWeight: "300",
-                      fontSize: "1.2rem",
-                      padding: "0.5rem 1rem",
-                      borderRadius: "0.5rem",
-                      color: "white",
-                      margin: "0",
-                    }}
-                  >
-                    {fest.name}
-                  </h4>
-                );
-              })}
+              {college && college.fests && college.fests.length > 0 && (
+  <div
+    style={{
+      display: "flex",
+      flexWrap: "wrap",
+      gap: "1rem",
+    }}
+  >
+    {college.fests.map((fest) => (
+      <h4
+        key={fest._id}  // Add a unique key for each element in the list
+        style={{
+          backgroundColor: "#7848f4",
+          width: "fit-content",
+          fontWeight: "300",
+          fontSize: "1.2rem",
+          padding: "0.5rem 1rem",
+          borderRadius: "0.5rem",
+          color: "white",
+          margin: "0",
+        }}
+      >
+        {fest.name}
+      </h4>
+    ))}
+  </div>
+)}
+
             </div>
           </div>
         </div>

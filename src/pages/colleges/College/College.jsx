@@ -110,7 +110,7 @@ const Event = () => {
 
       <div className="college__events">
         <div>
-          {collegeData.fests.length === 0 ? (
+          {collegeData.events.length === 0 ? (
             <div className="college__events__title">
               No <span>Events</span>
             </div>

@@ -1,9 +1,55 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import SyncLoader from "react-spinners/SyncLoader";
 import { images } from "../../constants";
-import { EventContainer } from "../../container";
+import { EventCard } from "../../components";
 
 const UserEvents = () => {
+  const [events, setEvents] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [search, setSearch] = useState("");
+  const [filteredEvents, setFilteredEvents] = useState(events);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      setLoading(true);
+      try {
+        const eventsResponse = await axios.get(
+          `${import.meta.env.VITE_BACKEND_HOST}/events`
+        );
+        const eventsData = eventsResponse.data;
+        setEvents(eventsData);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+        throw error;
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchData();
+  }, [/* Add dependencies if needed */]);
+
+  useEffect(() => {
+    const filtered = events.filter((event) =>
+      event.name.toLowerCase().includes(search.toLowerCase())
+    );
+
+    setFilteredEvents(filtered);
+  }, [search, events]);
+
+  const handleSearch = () => {
+    const filtered = events.filter((event) =>
+      event.name.toLowerCase().includes(search.toLowerCase())
+    );
+    setFilteredEvents(filtered);
+  };
+
+  const handleReset = () => {
+    setSearch("");
+    setFilteredEvents(events);
+  };
+
   return (
     <div
       style={{
@@ -43,15 +89,7 @@ const UserEvents = () => {
             Enter in the world of events. Discover now the latest Events or
             start creating your own!
           </p>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "start",
-              alignItems: "center",
-              gap: "1rem",
-            }}
-          >
+          <div>
             <Link
               to={"/events"}
               style={{
@@ -83,6 +121,65 @@ const UserEvents = () => {
           alt=""
         />
       </div>
+
+      {/* Additional Code */}
+      <div className="events__header">
+        <h1 className="events__header__name">Events</h1>
+        <div className="events__header__input">
+          <input
+            type="text"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="Search for events"
+            className="events__header__input__search"
+          />
+          <div
+            className="events__header__input__icon"
+            onClick={handleSearch}
+          >
+            <img src={images.search} alt="Search" />
+          </div>
+          {search && (
+            <div
+              className="events__header__input__icon"
+              onClick={handleReset}
+            >
+              <img src={images.reset} alt="Reset" />
+            </div>
+          )}
+        </div>
+      </div>
+      {loading ? (
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            margin: "3rem",
+          }}
+        >
+          <SyncLoader
+            color={"#7848F4"}
+            loading={loading}
+            size={10}
+            aria-label="Loading Spinner"
+            data-testid="loader"
+          />
+        </div>
+      ) : (
+        <div className="events__container">
+          {filteredEvents.reverse().map((event) => (
+            <Link key={event._id} to={`/events/${event._id}`}>
+              <EventCard
+                name={event.name}
+                date={event.start_date}
+                time={event.start_time}
+                location={event.location}
+                img={event.banner}
+              />
+            </Link>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
