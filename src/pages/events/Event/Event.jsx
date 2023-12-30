@@ -110,10 +110,7 @@ const Event = () => {
             <div className="register__header__detail__content__description">
               {event.description.slice(0, 250) + "..."}
             </div>
-            <div className="register__header__detail__content__location">
-              <img src={images.MapPin} alt="location" />
-              <p>View on map</p>
-            </div>
+
           </div>
           <div className="event__header__detail__register">
             <Register
@@ -218,7 +215,7 @@ const Event = () => {
               gap: "1.5rem",
             }}
           >
-            <h1>Organizer Contacts</h1>
+            {/* <h1>Organizer Contacts</h1>
             <a
               style={{
                 fontSize: "1.2rem",
@@ -254,7 +251,7 @@ const Event = () => {
                 {colleges.location}
               </span>
             </p>
-            <h3>Previous events</h3>
+            <h3>Previous events</h3> */}
             <div
               style={{
                 display: "flex",
@@ -374,20 +371,7 @@ const Event = () => {
                   }}
                 />
               </a>
-              <img
-                src={images.twitter}
-                alt="twitter"
-                style={{
-                  cursor: "pointer",
-                }}
-              />
-              <img
-                src={images.whatsapp}
-                alt="whatsapp"
-                style={{
-                  cursor: "pointer",
-                }}
-              />
+              
               <a href={event.social_links[0].facebook}>
                 <img
                   src={images.facebook}

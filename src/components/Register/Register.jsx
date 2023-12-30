@@ -5,10 +5,10 @@ import "./Register.scss";
 import { images } from "../../constants";
 
 const Register = ({ date, time, eventId }) => {
-  const [payment, setPayment] = useState(false);
+  const [payment, setPayment] = useState(true);
   const handlePayment = () => {
     axios
-      .post(`${import.meta.env.VITE_BACKEND_HOST}/events/:eventId/payments`, {
+      .post(`${import.meta.env.VITE_BACKEND_HOST}/events/:eventId/booking`, {
         amount: 1,
         eventId: eventId,
       })
@@ -40,10 +40,15 @@ const Register = ({ date, time, eventId }) => {
         <button onClick={handlePayment}>
           {payment ? "Booked" : "Book now"}
         </button>
+        {payment && (
+          <a href="facebook.com" target="_blank" rel="noopener noreferrer">
+            View  Details
+          </a>
+        )}
       </div>
-      <div className="ticket__promote">
+      {/* <div className="ticket__promote">
         <button>Program promoter</button>
-      </div>
+      </div> */}
       
     </div>
   );
