@@ -3,7 +3,7 @@ import logo2 from '../assets/logo2.svg';
 import logo_icon from '../assets/logo_icon.png';
 import vert_icon from '../assets/vert_icon.svg';
 import dummy from '../assets/dummy.svg';
-import profile from '../assets/profile.svg';
+import profile from '../assets/profile.png';
 import map from '../assets/map.svg';
 import myself from '../assets/myself.svg';
 import goback from '../assets/goback.svg';

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";  // Import useNavigate instead of useHistory
 import axios from "axios";
 import { Dropdown } from "../../components";
 import "./DropdownContainer.scss";
@@ -7,13 +7,10 @@ import "./DropdownContainer.scss";
 const DropdownContainer = () => {
   const [colleges, setColleges] = useState([]);
   const [clubs, setClubs] = useState([]);
-  // const [categories, setCategories] = useState([]);
-  const [events, setEvents] = useState([]); // Add state for events
-
+  const [events, setEvents] = useState([]);
   const [selectedCollege, setSelectedCollege] = useState("");
   const [selectedClubs, setSelectedClubs] = useState("");
-  // const [selectedCategory, setSelectedCategory] = useState("");
-  const [filteredEvents, setFilteredEvents] = useState([]);
+  const navigate = useNavigate();  // Use useNavigate instead of useHistory
 
   useEffect(() => {
     const fetchData = async () => {
@@ -28,7 +25,6 @@ const DropdownContainer = () => {
         );
         setClubs(clubsResponse.data);
 
-        // Fetch events data and set it to the state
         const eventsResponse = await axios.get(
           `${import.meta.env.VITE_BACKEND_HOST}/events`
         );
@@ -41,14 +37,6 @@ const DropdownContainer = () => {
     fetchData();
   }, []);
 
-  useEffect(() => {
-    // Filter events based on selected college
-    const filtered = events.filter((event) =>
-      event.college === selectedCollege
-    );
-    setFilteredEvents(filtered);
-  }, [selectedCollege, events]);
-
   const handleCollegeChange = (value) => {
     setSelectedCollege(value);
   };
@@ -57,15 +45,12 @@ const DropdownContainer = () => {
     setSelectedClubs(value);
   };
 
-  // const handleCategoryChange = (value) => {
-  //   setSelectedCategory(value);
-  // };
-
   const handleSearch = () => {
     console.log("Selected College:", selectedCollege);
     console.log("Selected Clubs:", selectedClubs);
-    // console.log("Selected Category:", selectedCategory);
-    console.log("Filtered Events:", filteredEvents);
+
+    // Redirect to /search with selectedCollege as a query parameter
+    navigate(`/search?schoolId=${selectedCollege}`);
   };
 
   return (
@@ -82,9 +67,7 @@ const DropdownContainer = () => {
         value={selectedClubs}
         onChange={handleClubsChange}
       />
-        <Link to="/search">
-        <button onClick={handleSearch}>Search</button>
-      </Link>
+      <button onClick={handleSearch}>Search</button>
     </div>
   );
 };

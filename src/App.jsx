@@ -53,7 +53,7 @@ function App() {
         <Route path="/events/:id/payment/cancel" element={<Cancel />} /> */}
 
         <Route path="/clubs" element={<Clubs />} />
-        <Route path="/clubs/:id" element={<Clubs />} />
+        <Route path="/clubs/:id" element={<Club />} />
         <Route path="/colleges" element={<Colleges />} />
         <Route path="/colleges/:id" element={<College />} />
 

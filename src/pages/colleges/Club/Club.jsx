@@ -1,28 +1,29 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
-
-import "./club.scss";
 import EventCard from "../../../components/EventCard/EventCard";
+import "./club.scss";
 
 const Event1 = () => {
-  const [clubs, setclubs] = useState([]);
+  const [club, setClub] = useState(null);
   const [events, setEvents] = useState([]);
   const { id } = useParams();
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const clubsResponse = await axios.get(
-          `${import.meta.env.VITE_BACKEND_HOST}/clubs`
+        const clubResponse = await axios.get(
+          `${import.meta.env.VITE_BACKEND_HOST}/clubs/${id}`
         );
+
         const eventsResponse = await axios.get(
           `${import.meta.env.VITE_BACKEND_HOST}/events`
         );
-        const clubsData = clubsResponse.data;
+
+        const clubData = clubResponse.data;
         const eventsData = eventsResponse.data;
 
-        setclubs(clubsData);
+        setClub(clubData);
         setEvents(eventsData);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -30,29 +31,16 @@ const Event1 = () => {
       }
     };
     fetchData();
-  }, []);
+  }, [id]);
 
-  const clubData = clubs.find((club) => club._id === id);
-
-  const clubEvents = events.filter((event) => event.clubs[0] === id);
-
-  if (!clubData) {
-    return <div>Event not found</div>;
+  if (!club) {
+    return <div>Loading...</div>;
   }
 
   return (
-    <div
-      className="club"
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        padding: "1rem",
-      }}
-    >
+    <div className="club">
       <div className="club__image">
-        <img src={clubData.imgUrl} alt={clubData.name} />
+        <img src={club.imgUrl} alt={club.name} />
         <Link to="/">
           <div className="club__image__button">
             <p>Back</p>
@@ -63,7 +51,7 @@ const Event1 = () => {
       <div className="club__content">
         <div className="club__logo">
           <img
-            src={clubData.logoUrl}
+            src={club.logoUrl}
             alt="logo"
             style={{
               width: "10rem",
@@ -80,57 +68,71 @@ const Event1 = () => {
             gap: "1rem",
           }}
         >
-          <div className="club__content__title">{clubData.name}</div>
+          <div className="club__content__title" style={{ fontWeight: 'bold' }}>
+            {club.name}
+          </div>
+
           <div className="club__content__description">
-            <p>{clubData.description}</p>
+            <p>{club.description}</p>
+            <p>
+              <strong>Department:</strong> {club.Department}
+            </p>
+            <p>
+              <strong>Location:</strong> {club.location}
+            </p>
+            <p>
+              <strong>College:</strong> {club.College}
+            </p>
+            <p>
+              <strong>Email:</strong> {club.Email}
+            </p>
+            {/* Add other relevant fields */}
           </div>
         </div>
       </div>
 
-      {clubData.events.length !== 0 ? (
+      {club.events && club.events.length !== 0 ? (
         <div className="club__events">
           <div className="club__events__title">
-            Upcomingg <span>Events</span>
+            Upcoming <span>Events</span>
           </div>
           <div className="club__events__list">
-            {clubEvents.reverse().map((event) => (
-              <Link key={event._id} to={`/events/${event._id}`}>
-                <EventCard
-                  name={event.name}
-                  date={event.start_date}
-                  time={event.start_time}
-                  location={event.location}
-                  img={event.banner}
-                />
-              </Link>
-            ))}
+            {events
+              .filter((event) => event.clubs[0] === id)
+              .reverse()
+              .map((event) => (
+                <Link key={event._id} to={`/events/${event._id}`}>
+                  <EventCard
+                    name={event.name}
+                    date={event.start_date}
+                    time={event.start_time}
+                    location={event.location}
+                    img={event.banner}
+                  />
+                </Link>
+              ))}
           </div>
         </div>
       ) : null}
 
-      <div className="club__events">
-        <div>
-          {clubData.fests.length === 0 ? (
-            <div className="club__events__title">
-              No <span>Events</span>
-            </div>
-          ) : null}
+      {club.fests && club.fests.length !== 0 ? (
+        <div className="club__events">
+          <div className="club__events__title">
+            Regular <span>Events</span>
+          </div>
+          <div className="club__events__list">
+            {club.fests.map((event) => (
+              <EventCard
+                key={event._id}
+                id={event._id}
+                name={event.name}
+                img={event.imgUrl}
+                description={event.description}
+              />
+            ))}
+          </div>
         </div>
-        <div className="club__events__title">
-          Regular <span>Events</span>
-        </div>
-        <div className="club__events__list">
-          {clubData.fests.map((event) => (
-            <EventCard
-              key={event._id}
-              id={event._id}
-              name={event.name}
-              img={event.imgUrl}
-              description={event.description}
-            />
-          ))}
-        </div>
-      </div>
+      ) : null}
     </div>
   );
 };

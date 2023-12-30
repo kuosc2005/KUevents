@@ -1,9 +1,32 @@
-// Search.jsx
-
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+import axios from "axios";
 import "./Search.scss";
 
-const Search = ({ filteredEvents }) => {
+const Search = () => {
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const schoolId = searchParams.get("schoolId");
+  const [filteredEvents, setFilteredEvents] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        if (schoolId) {
+          // Fetch events based on schoolId
+          const response = await axios.get(
+            `${import.meta.env.VITE_BACKEND_HOST}/events?schoolId=${schoolId}`
+          );
+          setFilteredEvents(response.data);
+        }
+      } catch (error) {
+        console.error("Error fetching events:", error);
+      }
+    };
+
+    fetchData();
+  }, [schoolId]);
+
   // Check if filteredEvents is not an array or has no items
   if (!Array.isArray(filteredEvents) || filteredEvents.length === 0) {
     return (
