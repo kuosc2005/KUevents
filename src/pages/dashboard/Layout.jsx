@@ -1,12 +1,26 @@
 import React, { useState } from "react";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, useNavigate } from "react-router-dom";
+
+import { useDispatch } from "react-redux";
+import { authActions } from "./../../store";
 
 import Sidebar from "./Sidebar";
 import "./styles.scss";
 
-
 const Layout = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+
+  const handleLogout = () => {
+    // Dispatch your logout action to update the authentication state
+    dispatch(authActions.logout());
+    
+    // Redirect to the home page or any other desired page after logout
+    navigate("/");
+
+  };
 
   return (
     <div
@@ -16,7 +30,6 @@ const Layout = ({ children }) => {
         width: "100%",
       }}
     >
-      
       <Sidebar
         user={{}} // data is the user data from the context
         isSidebarOpen={isSidebarOpen}
@@ -51,7 +64,6 @@ const Layout = ({ children }) => {
             zIndex: 100,
           }}
         >
-           
           <Link to="/clubs" className="clubs1">
             Clubs
           </Link>
@@ -67,10 +79,10 @@ const Layout = ({ children }) => {
           <Link to="/create-event" className="create1">
             Create
           </Link>
-          <Link to="/" className="signout1">
+          <button onClick={handleLogout} className="signout1">
             Sign Out
-          </Link>
-          </div>
+          </button>
+        </div>
         {children}
         <Outlet />
       </div>
