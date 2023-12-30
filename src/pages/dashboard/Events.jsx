@@ -16,7 +16,7 @@ const UserEvents = () => {
       setLoading(true);
       try {
         const eventsResponse = await axios.get(
-          `${import.meta.env.VITE_BACKEND_HOST}/events`
+          `${import.meta.env.VITE_BACKEND_HOST}/users/events`
         );
         const eventsData = eventsResponse.data;
         setEvents(eventsData);
@@ -124,7 +124,7 @@ const UserEvents = () => {
 
       {/* Additional Code */}
       <div className="events__header">
-        <h1 className="events__header__name">Events</h1>
+        <h1 className="events__header__name">My Events</h1>
         <div className="events__header__input">
           <input
             type="text"

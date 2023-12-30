@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
-import "./Advertisement.scss";
+import { useSelector } from "react-redux";
 import { images } from "../../constants";
+import "./Advertisement.scss";
 
 const Advertisement = () => {
+  // Retrieve isLoggedIn from Redux state
+  const isLoggedIn = useSelector((state) => state.isLoggedIn);
+
+  const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
+
+  useEffect(() => {
+    // Update local state when isLoggedIn changes
+    setIsUserLoggedIn(isLoggedIn);
+  }, [isLoggedIn]);
+
   return (
     <div className="ad">
       <div className="ad__img">
@@ -17,9 +27,15 @@ const Advertisement = () => {
           your unique style and objectives. Make your mark in the event world
           today.
         </p>
-        <Link to="/create-event">
-          <button>Create Events</button>
-        </Link>
+        {isUserLoggedIn ? (
+          <Link to="/create-event">
+            <button>Create Events</button>
+          </Link>
+        ) : (
+          <Link to="/signin">
+            <button>Sign In</button>
+          </Link>
+        )}
       </div>
     </div>
   );
