@@ -5,20 +5,26 @@ import "./Register.scss";
 import { images } from "../../constants";
 
 const Register = ({ date, time, eventId }) => {
-  const [payment, setPayment] = useState(true);
+  const [payment, setPayment] = useState(false);
   const handlePayment = () => {
     axios
-      .post(`${import.meta.env.VITE_BACKEND_HOST}/events/:eventId/booking`, {
+      .post(`${import.meta.env.VITE_BACKEND_HOST}/events/${eventId}/booking`, {
         amount: 1,
         eventId: eventId,
       })
-      .then((res) => {
-        console.log(res);
-        console.log(res.data);
+      .then(() => {
+        // Payment successful, update the state to mark it as booked
+        console.log("Payment successful");
         setPayment(true);
-        console.log(payment);
+      })
+      .catch((error) => {
+        console.error("Error handling payment:", error);
+        // Log the complete error object for more details
+        console.error(error);
+        // Handle error logic if needed
       });
   };
+  
   return (
     <div className="ticket">
       <div className="ticket__heading">
