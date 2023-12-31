@@ -47,7 +47,7 @@ const Register = ({ date, time, eventId }) => {
           {payment ? "Booked" : "Book now"}
         </button>
         {payment && (
-          <a href="facebook.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
             View  Details
           </a>
         )}
