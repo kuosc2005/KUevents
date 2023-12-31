@@ -5,6 +5,7 @@ import Search from "./search/Search";
 import Home from "./home/Home/Home";
 import Contact from "./contact/Contact";
 import About from "./about/About";
+import FAQs from "./faqs/faqs";
 
 import CreateEvent from "./events/CreateEvent/CreateEvent";
 import Event from "./events/Event/Event";
@@ -40,7 +41,7 @@ export {
     College,
     Colleges,
     Layout,
-
+    FAQs,
     UserEvents,
     User,
 

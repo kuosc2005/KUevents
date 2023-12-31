@@ -23,6 +23,7 @@ import {
   Search,
   Error,
   Tasks,
+  FAQs,
 } from "./pages";
 
 function App() {
@@ -59,6 +60,7 @@ function App() {
 
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/faqs" element={<FAQs />} />
 
         {/* {isLoggedIn && ( */}
           <>

@@ -101,13 +101,13 @@ const UserEvents = () => {
             >
               Discover now
             </Link>
-            <Link
+            {/* <Link
               style={{
                 color: "#fff",
               }}
             >
               Watch video
-            </Link>
+            </Link> */}
           </div>
         </div>
         <img

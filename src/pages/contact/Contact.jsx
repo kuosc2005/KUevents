@@ -32,7 +32,7 @@ const Contact = () => {
           <li>
             Email:{" "}
             <a href="mailto:roshansahani226@gmail.com">
-              roshansahani226@gmail.com
+              kuventsnoreply@gmail.com
             </a>
           </li>
           <li>
