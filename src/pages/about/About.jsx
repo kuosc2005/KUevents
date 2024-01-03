@@ -12,7 +12,7 @@ const About = () => {
         provide a comprehensive platform for colleges to organize, manage and
         promote their events. The platform aims to streamline the event
         management process by providing tools and features to effectively plan,
-        coordinate, and execute events. With Event Hive, colleges can create
+        coordinate, and execute events. With KUvents, colleges can create
         events, manage registrations, and promote their events to a wider
         audience.
         <br />
@@ -20,8 +20,7 @@ const About = () => {
         KUvents is designed to be user-friendly, flexible, and customizable
         to meet the specific needs of different colleges. The platform enables
         colleges to manage multiple events simultaneously and provides real-time
-        updates on event progress. By leveraging the latest technologies, Event
-        Hive promises to deliver a seamless and engaging experience to both
+        updates on event progress. By leveraging the latest technologies, KUvents promises to deliver a seamless and engaging experience to both
         event organizers and attendees.
       </p>
       <h1 className="about__heading">
@@ -198,16 +197,8 @@ const About = () => {
             Sapkota
           </h1>
           <p className="about__creator__info__content">
-            Greetings from Shreela Sapkota, the creator of this website! I
-            extend a warm welcome to all our visitors and users. It brings me
-            joy to see you here, and I hope you have a wonderful experience
-            exploring our platform. As the creator, I am dedicated to providing
-            you with the best possible service. If you have any questions,
-            suggestions, or feedback, please don't hesitate to reach out. Your
-            input is valuable to me, and I am committed to continuously
-            improving the website to meet your needs. Thank you for choosing our
-            platform. Enjoy your time here! <br />
-            <br /> Best regards, <br /> Roshan Sahani
+          Hello from Shreela Sapkota! A warm welcome to all our visitors. I'm delighted to have you here and hope you enjoy exploring our platform. As the creator, I'm dedicated to providing the best service. If you have any questions or feedback, feel free to reach out. Your input is valuable, and I'm committed to improving the website for you. Thanks for choosing our platform—enjoy your time here! <br />
+            <br /> Best regards, <br /> Shreela Sapkota
           </p>
           <div className="about__creator__info__links">
             <a

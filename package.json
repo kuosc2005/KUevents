@@ -73,7 +73,7 @@
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4"
   },
-  "description": "KUvents is an inter college event management system that provides a comprehensive platform for colleges to organize, manage, and promote their events. This repository contains the codebase for both the frontend and backend components of the Event Hive application.",
+  "description": "KUvents is an inter college event management system that provides a comprehensive platform for colleges to organize, manage, and promote their events. This repository contains the codebase for both the frontend and backend components of KUvents.",
   "main": "vite.config.js",
   "author": "KUvents Team",
   "license": "MIT"

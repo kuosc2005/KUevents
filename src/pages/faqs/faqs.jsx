@@ -28,7 +28,7 @@ const FAQs = () => (
       ))}
     </ul>
     <p>
-      If you have more questions, please <Link to="/contact-us">contact us</Link>.
+      If you have more questions, please <Link to="/contact">contact us</Link>.
     </p>
   </div>
   </div>

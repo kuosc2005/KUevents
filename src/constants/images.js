@@ -5,7 +5,6 @@ import vert_icon from '../assets/vert_icon.svg';
 import dummy from '../assets/dummy.svg';
 import profile from '../assets/profile.png';
 import map from '../assets/map.svg';
-import myself from '../assets/myself.svg';
 import goback from '../assets/goback.svg';
 import felix from "../assets/felix.jpg";
 import yural from "../assets/yural.jpg";
@@ -104,7 +103,6 @@ export default {
     menu,
     map,
     vert_icon,
-    myself,
     goback,
     felix,
     samikshya,
